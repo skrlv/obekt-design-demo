@@ -8,22 +8,30 @@
   <script src="app.js" type="module"></script>
 </head>
 <body id="top">
+<div class="reading-progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Перейти к содержимому</a>
 <header class="header wrap">
-  <a class="logo" href="#top" aria-label="Объект — на главную">объект<span>®</span></a>
+  <a class="logo" href="#top" aria-label="Объект — на главную">объект<span aria-hidden="true">✳</span></a>
   <nav aria-label="Основная навигация"><a href="#collection">Коллекция</a><a href="#idea">Подход</a><a href="#journal">В деталях</a></nav>
   <button class="cart-toggle" data-open-cart aria-label="Открыть корзину, товаров: 0">Корзина <span data-cart-count>0</span><span class="bag" aria-hidden="true">↗</span></button>
 </header>
 <main id="main">
   <section class="hero wrap" aria-labelledby="hero-title">
-    <div class="hero-caption"><span>ПРЕДМЕТЫ С ХАРАКТЕРОМ</span><span>КОЛЛЕКЦИЯ / 01</span></div>
-    <div class="hero-art">
-      <img src="assets/interior.jpg" alt="Светлый интерьер с лаконичной мебелью и мягкими природными оттенками" fetchpriority="high" width="1600" height="1067">
-      <div class="hero-copy"><h1 id="hero-title">Вещи,<br>с которыми<br>хочется жить.</h1><a class="button blue" href="#collection">Найти свой объект <span aria-hidden="true">↗</span></a></div>
-      <span class="hero-index">001 — ПРОСТРАНСТВО ДЛЯ СВОЕГО</span>
+    <div class="hero-caption"><span>ГАЛЕРЕЯ ПРЕДМЕТНОГО ДИЗАЙНА</span><span>КОЛЛЕКЦИЯ / 01</span></div>
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="hero-kicker"><span aria-hidden="true">✳</span> У каждой вещи — своё место.</p>
+        <h1 id="hero-title">Характер<br>пространства.<br><span>В деталях.</span></h1>
+        <p class="hero-description">Мебель и свет, с которых начинается ваш интерьер. Найдите предмет, близкий именно вам.</p>
+        <a class="button blue" href="#collection">Найти свой объект <span aria-hidden="true">↗</span></a>
+        <div class="hero-specimen"><span>01 — 06</span><p>Шесть предметов.<br>Много способов быть собой.</p></div>
+      </div>
+      <figure class="hero-art">
+        <div class="hero-image"><img src="assets/chair-wood.jpg" alt="Чёрный стул на деревянных ножках — графичный силуэт на голубом фоне" fetchpriority="high" width="800" height="1000"></div>
+        <figcaption><span>ОБЪЕКТ № 04 / АРКА</span><button class="hero-detail" data-product="arc" aria-label="Рассмотреть главный объект — стул «Арка»">Рассмотреть <span aria-hidden="true">↗</span></button></figcaption>
+      </figure>
     </div>
-    <div class="wordmark" aria-hidden="true">объект<span>®</span></div>
-    <div class="hero-bottom"><p>Мебель и свет.<br>Простые формы. Неслучайный выбор.</p><a href="#collection" aria-label="Перейти к коллекции">Исследовать коллекцию <span aria-hidden="true">↓</span></a></div>
+    <div class="hero-bottom"><p>СИДЕТЬ / СОБИРАТЬСЯ / ОСВЕЩАТЬ</p><span class="hero-rule" aria-hidden="true"></span><a href="#collection" aria-label="Перейти к коллекции">К коллекции <span aria-hidden="true">↓</span></a></div>
   </section>
 
   <section class="collection wrap section" id="collection" aria-labelledby="collection-title">
@@ -32,6 +40,7 @@
     <div class="catalog-toolbar"><div class="filters" role="group" aria-label="Категории товаров"><button data-filter="all" aria-pressed="true">Все объекты <sup>6</sup></button><button data-filter="seating" aria-pressed="false">Сидеть</button><button data-filter="tables" aria-pressed="false">Собираться</button><button data-filter="light" aria-pressed="false">Освещать</button></div><label class="sort-label"><span class="sr-only">Сортировка товаров</span><select id="sort" aria-label="Сортировка товаров"><option value="default">По умолчанию</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option></select></label></div>
     <div class="results-line"><span id="result-count" role="status" aria-live="polite">6 объектов</span><span>ЦЕНЫ И КОЛЛЕКЦИЯ ДЕМОНСТРАЦИОННЫЕ</span></div>
     <div class="product-grid" id="product-grid"></div>
+    <noscript><p class="noscript-note">Каталог доступен для просмотра. Для фильтров, карточек и корзины включите JavaScript в браузере.</p><div class="product-grid noscript-catalog"><article><img src="assets/chair.jpg" alt="Кресло «Мягкая линия», фотография-иллюстрация" width="800" height="1000" loading="lazy"><h3>Мягкая линия</h3><p>Кресло · 32 500 ₽</p><p>Мягкий силуэт и светлая фактура для того самого уголка, где можно замедлиться.</p></article><article><img src="assets/lounge.jpg" alt="Стул «Контур», фотография-иллюстрация" width="800" height="1000" loading="lazy"><h3>Контур</h3><p>Стул · 18 900 ₽</p><p>Плавная линия спинки, мягкое сиденье и тёплый оттенок дерева. Для долгих разговоров за столом.</p></article><article><img src="assets/table.jpg" alt="Обеденный стол «Общий круг», фотография-иллюстрация" width="800" height="1000" loading="lazy"><h3>Общий круг</h3><p>Обеденный стол · 44 900 ₽</p><p>Круглая форма, которая собирает людей. Для утреннего кофе, вечерних ужинов и повседневной жизни.</p></article><article><img src="assets/chair-wood.jpg" alt="Стул «Арка», фотография-иллюстрация" width="800" height="1000" loading="lazy"><h3>Арка</h3><p>Стул · 14 500 ₽</p><p>Точный графичный акцент. Контраст чёрного силуэта и натуральных ножек оживляет спокойное пространство.</p></article><article><img src="assets/shelf.jpg" alt="Напольный светильник «Луч», фотография-иллюстрация" width="800" height="1000" loading="lazy"><h3>Луч</h3><p>Напольный светильник · 21 900 ₽</p><p>Локальный свет и выразительный изгиб. Лаконичный объект для чтения и тихих вечеров.</p></article><article><img src="assets/sofa.jpg" alt="Диван «Горизонт», фотография-иллюстрация" width="800" height="1000" loading="lazy"><h3>Горизонт</h3><p>Диван · 89 500 ₽</p><p>Глубокий цвет и спокойная горизонталь. Центр притяжения гостиной, где всем находится место.</p></article></div></noscript>
   </section>
 
   <section class="manifesto section" id="idea" aria-labelledby="idea-title"><div class="wrap"><div class="section-line"><span>02 / ПОДХОД</span><span>МЕНЬШЕ СЛУЧАЙНОГО</span></div><div class="manifesto-grid"><div><h2 id="idea-title">Хороший дизайн<br>не требует<br><em>объяснений.</em></h2><p class="manifesto-note">ЕГО ХОЧЕТСЯ КОСНУТЬСЯ.</p></div><div class="manifesto-text"><p>Мы придумали «Объект» как коллекцию вещей, которые не спорят с пространством. Они дополняют его — формой, фактурой, пропорцией.</p><p>Мягкое кресло у окна. Свет над любимой книгой. Стол, за которым разговор длится чуть дольше. Каждый предмет — начало вашей истории.</p><div class="principles"><div><span>01</span><h3>Форма</h3><p>Чистые линии и спокойный силуэт.</p></div><div><span>02</span><h3>Ощущение</h3><p>Фактуры, которые хочется рассматривать.</p></div><div><span>03</span><h3>Место</h3><p>Предметы, с которыми пространство становится вашим.</p></div></div></div></div></div></section>
@@ -40,7 +49,7 @@
 
   <section class="faq wrap section" aria-labelledby="faq-title"><div><span class="eyebrow">ПАРА ВАЖНЫХ ВЕЩЕЙ</span><h2 id="faq-title">Вопросы<br>по существу.</h2></div><div><details><summary>Можно ли купить эти предметы?</summary><p>Это демонстрационный магазин для портфолио. Корзина работает в браузере, но реальные заказы, оплата и доставка не оформляются.</p></details><details><summary>Сохраняется ли корзина?</summary><p>Да, в этом браузере. Если хранение данных заблокировано, корзина работает до закрытия страницы. Данные никуда не отправляются.</p></details><details><summary>Откуда фотографии и характеристики?</summary><p>Фотографии с Unsplash используются как иллюстрации. Названия, цены, материалы и размеры придуманы для демонстрации интерфейса и не являются описанием товаров на фото.</p></details></div></section>
 </main>
-<footer class="footer"><div class="wrap"><div class="footer-top"><a href="#collection">Ваш следующий<br>любимый объект. <span aria-hidden="true">↗</span></a><p>ДЕМОНСТРАЦИЯ МАГАЗИНА<br>ПРЕДМЕТНОГО ДИЗАЙНА</p></div><div class="footer-brand" aria-hidden="true">объект®</div><div class="footer-bottom"><p>Вымышленный бренд. Цены и характеристики условные.<br>Заказы и оплата не оформляются.</p><a href="https://github.com/skrlv/obekt-design-demo">Проект на GitHub ↗</a><a href="#top">Наверх ↑</a></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-top"><a href="#collection">Ваш следующий<br>любимый объект. <span aria-hidden="true">↗</span></a><p>ДЕМОНСТРАЦИЯ МАГАЗИНА<br>ПРЕДМЕТНОГО ДИЗАЙНА</p></div><div class="footer-brand" aria-hidden="true">объект<span>✳</span></div><div class="footer-bottom"><p>Вымышленный бренд. Цены и характеристики условные.<br>Заказы и оплата не оформляются.</p><a href="https://github.com/skrlv/obekt-design-demo">Проект на GitHub ↗</a><a href="#top">Наверх ↑</a></div></div></footer>
 
 <dialog id="product-dialog" class="product-dialog" aria-labelledby="product-title"><button class="close" data-close-product aria-label="Закрыть описание товара">×</button><div id="product-detail"></div></dialog>
 <dialog id="cart-dialog" class="cart-dialog" aria-labelledby="cart-title"><div class="cart-head"><div><span class="eyebrow">ВАША КОЛЛЕКЦИЯ</span><h2 id="cart-title">Корзина<span aria-hidden="true">↗</span></h2></div><button class="close" data-close-cart aria-label="Закрыть корзину">×</button></div><p class="demo-note">Демо-магазин. Реальный заказ и оплата не оформляются.</p><div id="storage-note" role="status" hidden>Корзина работает только на этой странице: сохранение в браузере недоступно.</div><div id="cart-items"></div><div id="cart-bottom"></div></dialog>
