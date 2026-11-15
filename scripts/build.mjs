@@ -1,0 +1,13 @@
+import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+const root = new URL('../', import.meta.url);
+const output = new URL('_site/', root);
+const files = ['index.html', 'styles.css', 'app.js', 'catalog.mjs', 'version.json'];
+const html = await readFile(new URL('index.html', root), 'utf8');
+if (!html.includes('content="2.0.0"')) throw new Error('Release metadata mismatch');
+await rm(output, { recursive: true, force: true });
+await mkdir(output, { recursive: true });
+for (const file of files) await cp(new URL(file, root), new URL(file, output));
+await cp(new URL('assets/', root), new URL('assets/', output), { recursive: true });
+await writeFile(new URL('.nojekyll', output), '');
+console.log(`Static release 2.0.0: ${fileURLToPath(output)}`);
